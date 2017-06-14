@@ -15,7 +15,13 @@ int
 MyString::slength(const char *s) const
 {
   // Add implementation here
-  return 0;
+	int len = 0;
+	while (*s != '\0') {
+		len++;
+		s++;
+	}
+	return len;
+  //return 0;
 }
 
 // Initialize _s. Allocate memory for _s and copy s into _s
@@ -26,6 +32,14 @@ MyString::initialize(const char * s)
   // Allocate memory for _s.
 
   // Copy s into _s
+	int size = slength(s) + 1;
+	_s = new char[size];
+	int i = 0;
+	while (s[i] != '\0') {
+		_s[i] = s[i];
+		i++;
+	}
+	_s[size] = '\0';
 }
 
 // Create a MyString from a C string
@@ -77,10 +91,19 @@ MyString::substring(int i, int n)
   // Allocate memory for substring
 
   // Copy characters of substring
-  MyString sub;
+	if (i > length()) return MyString();
+	
+	char *_sub;
+	_sub = new char[n + 1];
+	for (int j = 0; j < n; j++) {
+		_sub[j] = _s[i + j];
+	}
+	_sub[n] = '\0';
 
+	MyString sub;
+	sub = MyString(_sub);
   // Return substring
-  return sub;
+	return sub;
 }
 
 // Remove at most n chars starting at location i
@@ -94,6 +117,14 @@ MyString::remove(int i, int n)
   // If i+n is beyond the end trunc string
 
   // Remove characters
+	if (i > length() || i + n > length()) return;
+	for (int j = 0; j < n; j++) {
+		for (int k = i; k < length() - 1; k++) {
+			_s[k] = _s[k + 1];
+		}
+	}
+	_s[length() - n] = '\0';
+	return;
 }
 
 // Return true if strings "this" and s are equal
@@ -101,7 +132,12 @@ bool
 MyString::operator == (const MyString & s)
 {
   // Add implementation here
-  return false;
+  //return false;
+	int i = 0;
+	while ((_s[i] != '\0' && s._s[i] != '\0') && (_s[i] == s._s[i])) {
+		i++;
+	}
+	return (_s[i] == s._s[i]);
 }
 
 
@@ -110,7 +146,12 @@ bool
 MyString::operator != (const MyString &s)
 {
   // Add implementation here
-  return false;
+  //return false;
+	int i = 0;
+	while ((_s[i] != '\0' && s._s[i] != '\0') && (_s[i] == s._s[i])) {
+		i++;
+	}
+	return (_s[i] != s._s[i]);
 }
 
 // Return true if string "this" and s is less or equal
@@ -118,7 +159,12 @@ bool
 MyString::operator <= (const MyString &s)
 {
   // Add implementation here
-  return false;
+  //return false;
+	int i = 0;
+	while ((_s[i] != '\0' && s._s[i] != '\0') && (_s[i] == s._s[i])) {
+		i++;
+	}
+	return (_s[i] <= s._s[i]);
 }
 
 // Return true if string "this" is greater than s
@@ -126,7 +172,12 @@ bool
 MyString::operator > (const MyString &s)
 {
   // Add implementation here
-  return false;
+  //return false;
+	int i = 0;
+	while ((_s[i] != '\0' && s._s[i] != '\0') && (_s[i] == s._s[i])) {
+		i++;
+	}
+	return (_s[i] > s._s[i]);
 }
 
 // Return character at position i.  Return '\0' if out of bounds.
@@ -134,7 +185,10 @@ char
 MyString::operator [] (int i)
 {
   // Add implementation here
-  return ' ';
+  //return ' ';
+	if (i > length()) return '\0';
+	char *ret = _s + i;
+	return *ret;
 }
 
 // Return C representation of string
@@ -172,6 +226,20 @@ MyString operator + (const MyString &s1, const MyString &s2)
   // Add s2
 
   MyString s;
+  delete s._s;
+  int size = s1.length() + s2.length();
+  s._s = new char[size];
+  int i = 0;
+  int j = 0;
+  while (s1._s[i] != '\0') {
+  	s._s[i] = s1._s[i];
+	i++;
+  }
+  while (s2._s[j] != '\0') {
+  	s._s[i + j] = s2._s[j];
+	j++;
+  }
+  s._s[size] = '\0';
   return s;
 }
 
