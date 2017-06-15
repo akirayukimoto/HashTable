@@ -151,3 +151,5 @@ After doing this, you may fix the identity used for this commit with:
     git commit --amend --reset-author
 
  4 files changed, 18 insertions(+), 4 deletions(-)
+[master 91720bc] 30 of 100
+ 4 files changed, 103 insertions(+), 20 deletions(-)

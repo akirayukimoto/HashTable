@@ -98,7 +98,7 @@ MyString::substring(int i, int n)
 	for (int j = 0; j < n; j++) {
 		_sub[j] = _s[i + j];
 	}
-	_sub[n] = '\0';
+	//_sub[n] = '\0';
 
 	MyString sub;
 	sub = MyString(_sub);
