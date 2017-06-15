@@ -98,12 +98,12 @@ MyString::substring(int i, int n)
 	for (int j = 0; j < n; j++) {
 		_sub[j] = _s[i + j];
 	}
-	//_sub[n] = '\0';
+	_sub[n] = '\0';
 
-	MyString sub;
-	sub = MyString(_sub);
+	//MyString sub;
+	//sub = MyString(_sub);
   // Return substring
-	return sub;
+	return _sub;
 }
 
 // Remove at most n chars starting at location i
