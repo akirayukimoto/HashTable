@@ -32,19 +32,19 @@ bool HashTableVoid::insertItem( const char * key, void * data)
 {
   // Add implementation here
   int h = hash(key);
-  HashTableVoidEntry *e = _buckets[h];
-  while (e != NULL) {
-  	if (strcmp(key, e->_key)) {
-		e->_data = data;
+  HashTableVoidEntry *entry = _buckets[h];
+  while (entry != NULL) {
+  	if (!strcmp(key, entry->_key)) {
+		entry->_data = data;
 		return true;
 	}
-  	e = e->_next;
+  	entry = entry->_next;
   }
-  e = new HashTableVoidEntry();
-  e->_key = strdup(key);
-  e->_data = data;
-  e->_next = _buckets[h];
-  _buckets[h] = e;
+  entry = new HashTableVoidEntry();
+  entry->_key = strdup(key);
+  entry->_data = data;
+  entry->_next = _buckets[h];
+  _buckets[h] = entry;
   return false;
 }
 
@@ -53,6 +53,14 @@ bool HashTableVoid::insertItem( const char * key, void * data)
 bool HashTableVoid::find( const char * key, void ** data)
 {
   // Add implementation here
+  int h = hash(key);
+  HashTableVoidEntry *entry = _buckets[h];
+  while (entry != NULL) {
+  	if (!strcmp(key, entry->_key)) {
+		return true;
+	}
+	entry = entry->_next;
+  }
   return false;
 }
 
