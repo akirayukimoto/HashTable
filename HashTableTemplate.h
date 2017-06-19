@@ -63,7 +63,8 @@ int HashTableTemplate<Data>::hash(const char * key)
 template <typename Data>
 HashTableTemplate<Data>::HashTableTemplate()
 {
-  // Add implementation here
+  // Add implementation here\
+	
 }
 
 template <typename Data>
