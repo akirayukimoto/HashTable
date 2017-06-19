@@ -39,7 +39,7 @@ MyString::initialize(const char * s)
 		_s[i] = s[i];
 		i++;
 	}
-	//_s[size] = '\0';
+	_s[size] = '\0';
 }
 
 // Create a MyString from a C string
@@ -100,10 +100,10 @@ MyString::substring(int i, int n)
 	}
 	_sub[n] = '\0';
 
-	MyString sub;
-	sub = MyString(_sub);
-   return sub;
-	//return _sub;
+	//MyString sub;
+	//sub = MyString(_sub);
+   //return sub;
+	return _sub;
 }
 
 // Remove at most n chars starting at location i
