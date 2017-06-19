@@ -165,3 +165,5 @@ After doing this, you may fix the identity used for this commit with:
  5 files changed, 21 insertions(+), 10 deletions(-)
 [master 19440ad] 38 of 100
  5 files changed, 55 insertions(+), 15 deletions(-)
+[master 7d65969] 38 of 100
+ 2 files changed, 3 insertions(+), 1 deletion(-)
