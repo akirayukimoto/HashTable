@@ -63,14 +63,30 @@ int HashTableTemplate<Data>::hash(const char * key)
 template <typename Data>
 HashTableTemplate<Data>::HashTableTemplate()
 {
-  // Add implementation here\
-	
+  // Add implementation here
+	for (int i = 0; i < TableSize; i++) {
+		_buckets[i] = NULL;
+	}
 }
 
 template <typename Data>
 bool HashTableTemplate<Data>::insertItem( const char * key, Data data)
 {
   // Add implementation here
+  int h = hash(key);
+  HashTableTemplateEntry<Data> *entry = _buckets[h];
+  while (entry != NULL) {
+  	if (!strcmp(key, entry->_key)) {
+		entry->_data = data;
+		return true;
+	}
+	entry = entry->_next;
+  }
+  entry = new HashTableTemplateEntry<Data>;
+  entry->_key = strdup(key);
+  entry->_data = data;
+  entry->_next = _buckets[h];
+  _buckets[h] = entry;
   return false;
 }
 
@@ -78,7 +94,15 @@ template <typename Data>
 bool HashTableTemplate<Data>::find( const char * key, Data * data)
 {
   // Add implementation here
-  return false;
+	int h = hash(key);
+	HashTableTemplateEntry<Data> * entry = _buckets[h];
+	while (entry != NULL) {
+		if (!strcmp(key, entry->_key)) {
+			return true;
+		}
+		entry = entry->_next;
+	}
+	return false;
 }
 
 template <typename Data>
@@ -108,11 +132,16 @@ template <typename Data>
 HashTableTemplateIterator<Data>::HashTableTemplateIterator(HashTableTemplate<Data> * hashTable)
 {
   // Add implementation here
+ 	
 }
 
 template <typename Data>
 bool HashTableTemplateIterator<Data>::next(const char * & key, Data & data)
 {
   // Add implementation here
-  return false;
+  if (_currentEntry == NULL) return false;
+  else {
+  	
+	return true;
+  }
 }

@@ -21,6 +21,7 @@ int HashTableVoid::hash(const char * key)
 HashTableVoid::HashTableVoid()
 {
   // Add implementation here
+  _buckets = new HashTableVoidEntry*[TableSize];
   for (int i = 0; i < TableSize; i++) {
   	_buckets[i] = NULL;
   }
@@ -40,11 +41,11 @@ bool HashTableVoid::insertItem( const char * key, void * data)
 	}
   	entry = entry->_next;
   }
-  entry = new HashTableVoidEntry();
-  entry->_key = strdup(key);
-  entry->_data = data;
-  entry->_next = _buckets[h];
-  _buckets[h] = entry;
+  HashTableVoidEntry *e = new HashTableVoidEntry();
+  e->_key = strdup(key);
+  e->_data = data;
+  e->_next = _buckets[h];
+  _buckets[h] = e;
   return false;
 }
 
@@ -57,6 +58,7 @@ bool HashTableVoid::find( const char * key, void ** data)
   HashTableVoidEntry *entry = _buckets[h];
   while (entry != NULL) {
   	if (strcmp(key, entry->_key) == 0) {
+		*data = entry->_data;
 		return true;
 	}
 	entry = entry->_next;
@@ -90,6 +92,13 @@ HashTableVoidIterator::HashTableVoidIterator(HashTableVoid * hashTable)
 bool HashTableVoidIterator::next(const char * & key, void * & data)
 {
   // Add implementation here
-  return false;
+  
+  if (_currentEntry == NULL) return false;
+  else {
+  	key = strdup(_currentEntry->_key);
+	data = _currentEntry->_data;
+	_currentEntry = _currentEntry->_next;
+	return true;
+  }
 }
 
