@@ -157,6 +157,17 @@ template <typename Data>
 bool HashTableTemplateIterator<Data>::next(const char * & key, Data & data)
 {
   // Add implementation here
+	int i = _currentBucket;
+	int tableSize = 2039;
+	i++;
+	while (_hashTable->_buckets[i] == NULL) i++;
+	if (_hashTable->_buckets[i] != NULL && i < tableSize) {
+		_currentEntry = _hashTable->_buckets[i];
+		key = _hashTable->_buckets[i]->_key;
+		data = _hashTable->_buckets[i]->_data;
+		_currentBucket = i;
+		return true;
+	}
 	return false;
 
 }
