@@ -64,6 +64,7 @@ template <typename Data>
 HashTableTemplate<Data>::HashTableTemplate()
 {
   // Add implementation here
+  	_buckets = new HashTableTemplateEntry<Data>*[TableSize];	
 	for (int i = 0; i < TableSize; i++) {
 		_buckets[i] = NULL;
 	}
@@ -98,6 +99,7 @@ bool HashTableTemplate<Data>::find( const char * key, Data * data)
 	HashTableTemplateEntry<Data> * entry = _buckets[h];
 	while (entry != NULL) {
 		if (!strcmp(key, entry->_key)) {
+			*data = entry->_data;
 			return true;
 		}
 		entry = entry->_next;
@@ -115,6 +117,7 @@ template <typename Data>
 bool HashTableTemplate<Data>::removeElement(const char * key)
 {
   // Add implementation here
+
   return false;
 }
 
@@ -139,9 +142,6 @@ template <typename Data>
 bool HashTableTemplateIterator<Data>::next(const char * & key, Data & data)
 {
   // Add implementation here
-  if (_currentEntry == NULL) return false;
-  else {
-  	
-	return true;
-  }
+	return false;
+
 }

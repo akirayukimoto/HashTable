@@ -15,8 +15,8 @@
 ./HashTableVoidTest test4    : 5 of 5
 ./HashTableVoidTest test5    : 5 of 5
 ./HashTableVoidTest test6    : 5 of 5
-./HashTableTemplateTest test1: 0 of 5
-./HashTableTemplateTest test2: 0 of 5
+./HashTableTemplateTest test1: 5 of 5
+./HashTableTemplateTest test2: 5 of 5
 ./HashTableTemplateTest test3: 0 of 5
 ./HashTableTemplateTest test4: 0 of 5
 ./HashTableTemplateTest test5: 0 of 5
