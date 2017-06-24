@@ -16,7 +16,7 @@ MyString::slength(const char *s) const
 {
   // Add implementation here
 	int len = 0;
-	while (*s != '\0') {
+	while (*s) {
 		len++;
 		s++;
 	}
@@ -39,7 +39,7 @@ MyString::initialize(const char * s)
 		_s[i] = s[i];
 		i++;
 	}
-	_s[size] = '\0';
+	//_s[size] = '\0';
 }
 
 // Create a MyString from a C string
