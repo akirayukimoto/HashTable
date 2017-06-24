@@ -27,6 +27,23 @@ HashTableVoid::HashTableVoid()
   }
 }
 
+HashTableVoid::~HashTableVoid() {
+	HashTableVoidEntry *curr;
+	HashTableVoidEntry *next;
+	for (int i = 0; i < TableSize; i++) {
+		curr = _buckets[i];
+		while (curr != NULL) {
+			next = curr->_next;
+			HashTableVoidEntry *temp = curr;
+			curr = next;
+			free((void *)temp->_key);
+			delete temp;
+		}
+		_buckets[i] = NULL;
+	}
+	delete _buckets;
+}
+
 // Add a record to the hash table. Returns true if key already exists.
 // Substitute content if key already exists.
 bool HashTableVoid::insertItem( const char * key, void * data)
