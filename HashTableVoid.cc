@@ -61,11 +61,13 @@ bool HashTableVoid::insertItem( const char * key, void * data)
   HashTableVoidEntry *e = new HashTableVoidEntry();
   e->_key = strdup(key);
   e->_data = data;
-  e->_next = _buckets[h];
+  //e->_next = _buckets[h];
+  //_buckets[h] = e;
   if (_buckets[h] == NULL) {
   	e->_next = NULL;
   }
-  else _buckets[h] = e;
+  else e->_next = _buckets[h];
+  _buckets[h] = e;
   return false;
 }
 
