@@ -91,6 +91,9 @@ bool HashTableVoid::removeElement(const char * key)
 HashTableVoidIterator::HashTableVoidIterator(HashTableVoid * hashTable)
 {
   // Add implementation here
+	_currentBucket = 0;
+	_currentEntry = NULL;
+	_hashTable = hashTable;
   
 }
 
