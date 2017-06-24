@@ -18,7 +18,7 @@ int HashTableVoid::hash(const char * key)
   	sum++;
 	key++;
   }
-  return sum % TableSize;
+  return (sum + 1) % TableSize;
 }
 
 // Constructor for hash table. Initializes hash table
