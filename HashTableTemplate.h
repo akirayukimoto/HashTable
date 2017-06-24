@@ -117,8 +117,21 @@ template <typename Data>
 bool HashTableTemplate<Data>::removeElement(const char * key)
 {
   // Add implementation here
-
-  return false;
+	int h = hash(key);
+	HashTableTemplateEntry<Data> *entry = _buckets[h];
+	HashTableTemplateEntry<Data> *prev = NULL;
+	while (entry != NULL) {
+		if (!strcmp(key, entry->_key)) {
+			if (prev != NULL) prev = entry->_next;
+			else _buckets[h] = entry->_next;
+			free((void *)entry->_key);
+			delete entry;
+			return true;
+		}
+		prev = entry;
+		entry = entry->_next;
+	}
+	return false;
 }
 
 template <typename Data>
@@ -135,7 +148,7 @@ template <typename Data>
 HashTableTemplateIterator<Data>::HashTableTemplateIterator(HashTableTemplate<Data> * hashTable)
 {
   // Add implementation here
- 	
+ 		
 }
 
 template <typename Data>
