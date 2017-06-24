@@ -31,11 +31,14 @@ CCFLAGS= -g
 # The dependencies of "all" are the files that we want to build.
 #
 
-all: TestMyString HashTableTemplateTest HashTableVoidTest wcTemplate wcVoid
+all: TestMyString TestMyStringMemory HashTableTemplateTest HashTableVoidTest wcTemplate wcVoid
 
 # Build TestMyString
 TestMyString: TestMyString.cc MyString.cc
 	$(CXX) -o TestMyString TestMyString.cc MyString.cc
+
+TestMyStringMemory: TestMyStringMemory.cc MyString.cc
+	$(CXX) -o TestMyStringMemory TestMyStringMemory.cc MyString.cc
 
 HashTableTemplateTest: HashTableTemplate.h HashTableTemplateTest.cc
 	$(CXX) -o HashTableTemplateTest HashTableTemplateTest.cc
@@ -50,5 +53,5 @@ wcTemplate: wcTemplate.cc
 	$(CXX) -o wcTemplate wcTemplate.cc
 
 clean:
-	rm -f core *.o TestMyString HashTableTemplateTest  HashTableVoidTest  mygrep out1 out2 wcTemplate wcVoid out1 out2
+	rm -f core *.o TestMyString TestMyStringMemory HashTableTemplateTest  HashTableVoidTest HashTableVoidTestMemory  mygrep out1 out2 wcTemplate wcVoid out1 out2
 
