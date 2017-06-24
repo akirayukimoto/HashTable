@@ -10,15 +10,16 @@ int HashTableVoid::hash(const char * key)
 {
   // Add implementation here
   int sum = 0;
+  const char *tmp = key;
   //int len = strlen(key);
   //for (int i = 0; i < len; i++) {
   //	sum += (i + 1) * key[i];
   //}
-  while (*key != '\0') {
-  	sum++;
-	key++;
+  while (*tmp != '\0') {
+  	sum += *tmp;
+	tmp++;
   }
-  return (sum + 1) % TableSize;
+  return sum % TableSize;
 }
 
 // Constructor for hash table. Initializes hash table
