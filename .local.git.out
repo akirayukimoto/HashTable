@@ -215,3 +215,7 @@ After doing this, you may fix the identity used for this commit with:
  4 files changed, 17 insertions(+), 4 deletions(-)
 [master df5d45d] 85 of 100
  2 files changed, 3 insertions(+), 1 deletion(-)
+[master a627018] 85 of 115
+ 6 files changed, 182 insertions(+), 54 deletions(-)
+ create mode 100644 TestMyStringMemory.cc
+ rewrite results.txt (100%)
