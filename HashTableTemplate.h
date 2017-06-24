@@ -148,7 +148,9 @@ template <typename Data>
 HashTableTemplateIterator<Data>::HashTableTemplateIterator(HashTableTemplate<Data> * hashTable)
 {
   // Add implementation here
- 		
+	_currentBucket = 0;
+	_currentEntry = NULL;
+	_hashTable = hashTable;
 }
 
 template <typename Data>
