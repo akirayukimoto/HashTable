@@ -39,7 +39,7 @@ MyString::initialize(const char * s)
 		_s[i] = s[i];
 		i++;
 	}
-	//_s[size] = '\0';
+	_s[size] = '\0';
 }
 
 // Create a MyString from a C string
