@@ -11,13 +11,8 @@ int HashTableVoid::hash(const char * key)
   // Add implementation here
   int sum = 0;
   const char *tmp = key;
-  //int len = strlen(key);
-  //for (int i = 0; i < len; i++) {
-  //	sum += (i + 1) * key[i];
-  //}
-  while (*tmp != '\0') {
-  	sum += *tmp;
-	tmp++;
+  for (int i = 0; i < strlen(tmp); i++) {
+  	sum += (i + 1) * tmp[i];
   }
   return sum % TableSize;
 }
