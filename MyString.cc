@@ -8,6 +8,7 @@
 // what each method needs to do.
 
 #include <stdio.h>
+//#include <string.h>
 #include "MyString.h"
 
 // My own implementation of strlen
@@ -16,9 +17,9 @@ MyString::slength(const char *s) const
 {
   // Add implementation here
 	int len = 0;
-	while (*s++) {
+	while (*s) {
 		len++;
-		//s++;
+		s++;
 	}
 	return len;
   //return 0;
@@ -34,12 +35,19 @@ MyString::initialize(const char * s)
   // Copy s into _s
 	int size = slength(s) + 1;
 	_s = new char[size];
-	int i = 0;
-	while (s[i] != '\0') {
+	//const char *tmp = s;
+	//int i = 0;
+	//while (s[i] != '\0') {
+	//	i++;
+	//	_s[i] = s[i];
+		//i++;
+	//}
+	int i;
+	for (i = 0; s[i] != '\0'; ++i) {
 		_s[i] = s[i];
-		i++;
 	}
-	_s[size] = '\0';
+	_s[i] = '\0';
+	//strcpy(_s, s);
 }
 
 // Create a MyString from a C string
@@ -93,8 +101,7 @@ MyString::substring(int i, int n)
   // Copy characters of substring
 	if (i > length()) return MyString();
 	
-	char *_sub;
-	_sub = new char[n + 1];
+	char *_sub = new char[n + 1];
 	for (int j = 0; j < n; j++) {
 		_sub[j] = _s[i + j];
 	}
