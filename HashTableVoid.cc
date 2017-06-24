@@ -72,10 +72,16 @@ bool HashTableVoid::removeElement(const char * key)
   // Add implementation here
   int h = hash(key);
   HashTableVoidEntry *entry = _buckets[h];
+  HashTableVoidEntry *prev = NULL;
   while (entry != NULL) {
   	if (strcmp(key, entry->_key) == 0) {
+		if (prev != NULL) prev = entry->_next;
+		else _buckets[h] = entry->_next;
+		free((void *)entry->_key);
+		delete entry;
 		return true;
 	}
+	prev = entry;
 	entry = entry->_next;
   }
   return false;
