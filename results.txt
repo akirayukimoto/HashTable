@@ -29,8 +29,8 @@
 ./checkMemory.sh HashTableVoidTest test1    : 1 of 1
 ./checkMemory.sh HashTableVoidTest test2    : 1 of 1
 ./checkMemory.sh HashTableVoidTest test3    : 1 of 1
-./checkMemory.sh HashTableVoidTest test4    : 1 of 1
-./checkMemory.sh HashTableVoidTest test5    : 1 of 1
+./checkMemory.sh HashTableVoidTest test4    : 0 of 1
+./checkMemory.sh HashTableVoidTest test5    : 0 of 1
 ./checkMemory.sh HashTableVoidTest test6    : 1 of 1
 ./checkMemory.sh HashTableTemplateTest test1: 1 of 1
 ./checkMemory.sh HashTableTemplateTest test2: 1 of 1
