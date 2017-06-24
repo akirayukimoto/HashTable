@@ -2,7 +2,7 @@
 ./TestMyString test2                        : 3 of 3
 ./TestMyString test3                        : 3 of 3
 ./TestMyString test4                        : 3 of 3
-./TestMyString test5                        : 3 of 3
+./TestMyString test5                        : 0 of 3
 ./TestMyString test6                        : 3 of 3
 ./TestMyString test7                        : 3 of 3
 ./TestMyString test8                        : 3 of 3

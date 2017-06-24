@@ -16,9 +16,9 @@ MyString::slength(const char *s) const
 {
   // Add implementation here
 	int len = 0;
-	while (*s) {
+	while (*s++) {
 		len++;
-		s++;
+		//s++;
 	}
 	return len;
   //return 0;
@@ -100,10 +100,10 @@ MyString::substring(int i, int n)
 	}
 	_sub[n] = '\0';
 
-	//MyString sub;
-	//sub = MyString(_sub);
-   //return sub;
-	return _sub;
+	MyString sub;
+	sub = MyString(_sub);
+   	return sub;
+	//return _sub;
 }
 
 // Remove at most n chars starting at location i
@@ -211,6 +211,7 @@ MyString::length() const
 MyString::~MyString()
 {
   // Add implementation here
+	
   delete [] _s;
 }
 
