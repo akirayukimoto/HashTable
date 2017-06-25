@@ -75,13 +75,13 @@ template <typename Data>
 HashTableTemplate<Data>::~HashTableTemplate()
 {
 	HashTableTemplateEntry<Data> *curr;
-	HashTableTemplateEntry<Data> *next;
+	//HashTableTemplateEntry<Data> *next;
 	for (int i = 0; i < TableSize; i++) {
 		curr = _buckets[i];
 		while (curr != NULL) {
-			next = curr->_next;
+			//next = curr->_next;
 			HashTableTemplateEntry<Data> *temp = curr;
-			curr = next;
+			curr = curr->_next;
 			free((void *)temp->_key);
 			delete temp;
 		}
