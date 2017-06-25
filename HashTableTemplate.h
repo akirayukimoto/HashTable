@@ -78,7 +78,7 @@ HashTableTemplate<Data>::~HashTableTemplate()
 	//HashTableTemplateEntry<Data> *next;
 	for (int i = 0; i < TableSize; i++) {
 		curr = _buckets[i];
-		while (curr != NULL) {
+		while (curr) {
 			//next = curr->_next;
 			HashTableTemplateEntry<Data> *temp = curr;
 			curr = curr->_next;
