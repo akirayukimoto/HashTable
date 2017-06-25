@@ -130,8 +130,12 @@ bool HashTableTemplate<Data>::find( const char * key, Data * data)
 
 template <typename Data>
 Data HashTableTemplate<Data>::operator[] (const char * &key) {
-  Data d;
-  return d;
+  //Data d;
+  //return d;
+	Data d;
+	bool answer = find(key, &d);
+	if (answer) return d;
+	else return NULL;
 }
 
 template <typename Data>

@@ -20,7 +20,7 @@
 ./HashTableTemplateTest test3               : 5 of 5
 ./HashTableTemplateTest test4               : 5 of 5
 ./HashTableTemplateTest test5               : 5 of 5
-./HashTableTemplateTest test6               : 0 of 5
+./HashTableTemplateTest test6               : 5 of 5
 ./testWcVoid                                : 5 of 5
 ./testWcTemplate                            : 5 of 5
 ./checkMemory.sh TestMyStringMemory test1   : 1 of 1
@@ -37,4 +37,4 @@
 ./checkMemory.sh HashTableTemplateTest test3: 1 of 1
 ./checkMemory.sh HashTableTemplateTest test4: 1 of 1
 ./checkMemory.sh HashTableTemplateTest test5: 1 of 1
-./checkMemory.sh HashTableTemplateTest test6: 0 of 1
+./checkMemory.sh HashTableTemplateTest test6: 1 of 1
