@@ -233,11 +233,11 @@ MyString operator + (const MyString &s1, const MyString &s2)
   s._s = new char[size];
   int i = 0;
   int j = 0;
-  while (s1._s[i] != '\0') {
+  while (s1._s[i]) {
   	s._s[i] = s1._s[i];
 	i++;
   }
-  while (s2._s[j] != '\0') {
+  while (s2._s[j]) {
   	s._s[i + j] = s2._s[j];
 	j++;
   }
