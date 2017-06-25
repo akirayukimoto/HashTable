@@ -35,13 +35,6 @@ MyString::initialize(const char * s)
   // Copy s into _s
 	int size = slength(s) + 1;
 	_s = new char[size];
-	//const char *tmp = s;
-	//int i = 0;
-	//while (s[i] != '\0') {
-	//	i++;
-	//	_s[i] = s[i];
-		//i++;
-	//}
 	int i;
 	for (i = 0; s[i] != '\0'; ++i) {
 		_s[i] = s[i];
