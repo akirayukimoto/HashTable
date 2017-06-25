@@ -213,6 +213,7 @@ MyString::~MyString()
   // Add implementation here
 	
   delete [] _s;
+  //delete _s;
 }
 
 // Concatanate two strings (non member method)
