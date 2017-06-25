@@ -102,7 +102,8 @@ MyString::substring(int i, int n)
 
 	MyString sub;
 	sub = MyString(_sub);
-   	return sub;
+   	delete _sub;
+	return sub;
 	//return _sub;
 }
 
