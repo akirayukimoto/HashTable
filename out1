@@ -1,9 +1,5 @@
 
 
-(apm@cs.purdue.edu), 1
-(jtk@cs.purdue.edu), 1
-(mja@cs.purdue.edu), 1
--                    2
 -----------------------
 -----------------------
 0:ge
@@ -119,6 +115,7 @@
 199:with
 19:the
 1:from
+-                    2
 200:everyday
 201:is
 202:changing:
@@ -391,68 +388,33 @@
 98:partners,
 99:have
 9:Greetings!
-Aditya               1
-Ahmed                1
-Assistant            1
-Associate            1
-Atallah              1
-Building             1
-Computer             4
-Conte,               1
-Denning,             1
-Department           2
-Entertainment        1
-Formed               1
-Greetings!           1
-HISTOGRAM
-Hambrusch.           1
-Head                 3
-John                 1
-Korb                 1
-Lawson               1
-Leadership           1
-Mathur               1
-Mikhail              1
-On                   1
-Our                  1
-Peter                1
-Projects             1
-Reading file greetings.txt...
-Rice,                1
-Sam                  1
-Sameh,               1
-Science              2
-Science,             1
-Susanne              1
-Team,                1
-The                  4
-These                2
-Through              1
-Tim                  1
-WORDS
-We                   2
-Whether              1
-Your                 1
 a                    9
+Aditya               1
 administrators,      1
 advancement          1
 advancements         1
 ahead.               1
+Ahmed                1
 all                  1
 alum,                1
 alumni               1
 an                   3
 and                  25
+(apm@cs.purdue.edu), 1
 architecture         1
 are                  5
 areas                1
 areas.               1
 as                   3
+Assistant            1
+Associate            1
 at                   1
+Atallah              1
 attractive,          1
 become               1
 behalf               1
 browse               1
+Building             1
 built                1
 by                   1
 capable              1
@@ -462,15 +424,19 @@ changing:            1
 colleague,           1
 comments             1
 computer             3
+Computer             4
 computers            1
 computing.           1
+Conte,               1
 continue             1
 core                 1
 corporate            2
 creation             1
 deal                 1
 dedicated            1
+Denning,             1
 department           1
+Department           2
 departmental         1
 desktop              1
 devices              1
@@ -485,6 +451,7 @@ efforts              1
 encouragement        1
 endeavor.            1
 engineering          1
+Entertainment        1
 equipment            1
 essential            2
 everyday             2
@@ -500,6 +467,7 @@ flexible             1
 flexible,            1
 for                  3
 form                 1
+Formed               1
 forward              1
 foundation           1
 from                 3
@@ -512,10 +480,13 @@ generous             1
 global               2
 gone                 1
 graduate             1
+Greetings!           1
 group                1
+Hambrusch.           1
 hardware             1
 has                  3
 have                 1
+Head                 3
 hear                 1
 heavily              1
 help                 1
@@ -523,24 +494,33 @@ hence                1
 here                 1
 high                 1
 hiring               1
+HISTOGRAM
 holds                1
 human                1
 importance           1
 in                   8
 is                   3
 itself               1
+John                 1
+(jtk@cs.purdue.edu), 1
 key                  1
+Korb                 1
 laptop.              1
+Lawson               1
 leaders,             1
 leadership           1
+Leadership           1
 led                  1
 level                1
 levels               1
 looking              1
 maintain             1
 many                 3
+Mathur               1
 means                1
 meeting              1
+Mikhail              1
+(mja@cs.purdue.edu), 1
 move                 1
 multi-core           1
 multi-disciplinary   1
@@ -551,8 +531,10 @@ new                  1
 next                 1
 now                  3
 of                   16
+On                   1
 on                   2
 or                   1
+Our                  1
 our                  4
 over                 1
 parent,              1
@@ -561,10 +543,13 @@ partners,            1
 people.              1
 performance          1
 pervades             1
+Peter                1
 primary              1
 processors           1
 programs.            1
+Projects             1
 provide              2
+Reading file greetings.txt...
 ready                1
 recognized           1
 recruiting           1
@@ -574,6 +559,11 @@ relies               1
 replacing            1
 research,            1
 retention            1
+Rice,                1
+Sam                  1
+Sameh,               1
+Science,             1
+Science              2
 science              3
 scientists           1
 seek                 1
@@ -596,15 +586,21 @@ students,            1
 successful           1
 suggestions          1
 support              2
+Susanne              1
 teaching,            1
 team:                1
+Team,                1
 techniques           1
 testimony            1
 that                 2
 the                  18
+The                  4
 these                1
+These                2
+Through              1
 through              3
 thus                 1
+Tim                  1
 times                1
 tirelessly           1
 to                   9
@@ -615,16 +611,20 @@ us                   2
 use                  1
 varied               2
 want                 1
+We                   2
 we                   5
 web                  1
 welcome              2
+Whether              1
 which                1
 widely               1
 will                 1
 with                 3
+WORDS
 work                 1
 workforce            2
 years                1
-you                  2
 you!                 1
 you.                 1
+you                  2
+Your                 1
